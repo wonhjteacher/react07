@@ -16,7 +16,6 @@ const ListTotal = () => {
         .then((res) => res.json())
         .then((data)=> setLists(data))
     },[])
-    console.log(lists)
 
     return (
         <div>

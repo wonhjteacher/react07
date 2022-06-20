@@ -10,18 +10,16 @@ const Mainbanner = () => {
     return (
     <MainSlider>
           <Swiper
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination,Autoplay]}
             pagination={{ clickable: true }}
             navigation
             loop={true} // 무한루프 
             autoplay={{
-                delay: 2500,
+                delay: 3000,
                 disableOnInteraction: false,
               }} 
             spaceBetween={0}//슬라이더 사이 마진  
             slidesPerView={1} // 한번에 보여지는 슬라이더 
-            onSlideChange={() => console.log('slide change')} // //슬라이드를 넘길 때 마다 호출됩니다
-            onSwiper={(swiper) => console.log(swiper)}
             >
             <SwiperSlide><img src='./img/slide/slide01.png' alt='' /></SwiperSlide>
             <SwiperSlide><img src='./img/slide/slide02.png' alt='' /></SwiperSlide>
@@ -37,7 +35,6 @@ export default Mainbanner;
 
 const MainSlider =styled.div`
     width: 1200px;
-    background: #f00;
     margin:1rem auto;
     & .swiper-slide img{
         width:100%;

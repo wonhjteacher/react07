@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import { useState, useEffect}  from "react";
+import Pagination from './Pagination';
 
 
 const ListTotal = () => {
@@ -34,6 +35,13 @@ const ListTotal = () => {
                     
                 }
              </Ul>
+             <Pagination 
+                total={lists.length} 
+                page={page} 
+                setPage={setPage} 
+                LIST_PER_PAGE={LIST_PER_PAGE}
+             />
+
 
         </div>
     );

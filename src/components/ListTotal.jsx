@@ -25,7 +25,7 @@ const ListTotal = () => {
 
                     [...lists].reverse().slice(startNum,endNum).map(({id,title,body})=>{
                             return (
-                                <Li>
+                                <Li key={id}>
                                     <span className='idName'>{id}</span> 
                                     <span className='listBody'>{body}</span>
                                  </Li>

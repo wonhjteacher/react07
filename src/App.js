@@ -1,9 +1,11 @@
 import './App.css';
 import Style from './components/Style';
+import GlobalStyle from "./components/GlobalStyle";
 
 function App() {
   return (
     <div className="App">
+      <GlobalStyle />
       <Style />
     </div>
   );
@@ -11,9 +13,3 @@ function App() {
 
 export default App;
 
-/* 
- scss 
- module.css 
- styled components 
- css in js  
-*/

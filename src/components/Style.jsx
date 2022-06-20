@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Style = () => {
     return (
@@ -11,9 +11,17 @@ const Style = () => {
                 <Btn borderColor="#03f" active> normal </Btn>
                 <Btn borderColor="#ddd"> disabled  </Btn>
                 <Btn borderColor="#f30"> active </Btn>
+                <Text size="20px" color="#f99129">2022년 6월 20일</Text>
+                <Text size="16px" color="#7d7010">월요일</Text>
+                <Text size="24px" color="#5363df">오전 10시 13분</Text>
             </Box>
             <Box as="ul">
-
+                <Text size="16px" color="#f59" as="li">menu1</Text>
+                <Text size="16px" color="#f59" as="li">menu3</Text>
+                <Text size="16px" color="#f59" as="li">menu2</Text>
+            </Box>
+            <Box>
+                <AniBtn>애니메이션 버튼</AniBtn> 
             </Box>
         </div>
     );
@@ -46,9 +54,28 @@ const Title = styled.h2`
     color:${(props)=>props.color};
     margin: 1rem 0;
 `
+const Text = styled.p`
+    margin:10px 0;
+    font-size:${(props) => props.size};
+    color:${(props) => props.color};
+`
+const colorChange = keyframes`
+    0%{background-color: red;}
+    100%{ background-color: yellow;}
+`
+
+/* 확장시키고 애니메이션 적용  */
+const AniBtn = styled(Btn)`
+    width:400px;
+    animation:${colorChange} 1.5s alternate infinite ;
+`
 /* 
 1.  as사용 
-2. 
+2.  props 사용
+3.  attrs 사용
+4. 확장 
+5. 애니메이션 적용 
+6. 글로벌 styled적용 
  scss 
  module.css 
  styled components 

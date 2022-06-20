@@ -1,4 +1,8 @@
-/*  
+import { createGlobalStyle } from 'styled-components';
+
+
+const GlobalStyle = createGlobalStyle`
+     
 *{box-sizing: border-box;}
  body {
   margin: 0;
@@ -29,4 +33,7 @@ a:hover {text-decoration:underline}
 iframe {overflow:hidden;margin:0;border:0;padding:0;vertical-align:top}
 mark {background-color:transparent}
 i {font-style:normal}
-.blind{display: none;}  */
+.blind{display: none;} 
+`
+
+export default GlobalStyle;

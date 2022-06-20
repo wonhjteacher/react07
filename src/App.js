@@ -4,6 +4,7 @@ import GlobalStyle from "./components/GlobalStyle";
 import Mainbanner from './components/Mainbanner';
 import SubBanner from './components/SubBanner';
 import CanSlider from './components/CanSlider';
+import ListTotal from './components/ListTotal'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Mainbanner />
       <SubBanner />
       <CanSlider />
+      <ListTotal />
       <Style />
     </div>
   );

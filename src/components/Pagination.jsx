@@ -17,6 +17,7 @@ const Pagination = ({ total,page,setPage,LIST_PER_PAGE}) => {
                             <PageNumButton 
                               key={i+1}
                               onClick={() => setPage(i + 1)}
+                              className={page === i + 1 ? "active" : null}
                             >
                                 {i + 1}
                             </PageNumButton>
@@ -56,6 +57,11 @@ const PrevButton = styled.button`
    &[disabled]{
         background:#e0e0e0;
         color:#fff;
+   }
+   &.active{
+    font-weight: bold;
+    color:#f93;
+    text-decoration:underline;
    }
 `
 
